@@ -1,11 +1,19 @@
 stages:
   - build
+  - Test
 
 build_project:
   stage: build
   script:
-    - xcodebuild clean -project Testing in Xcode.xcodeproj -scheme Testing in Xcode | xcpretty
-    - xcodebuild test -project Testing in Xcode.xcodeproj -scheme Testing in Xcode -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4' | xcpretty -s
+    - xcodebuild -scheme Testing in Xcode
   tags:
     - swift
     - testing
+
+Feature Tests:
+  stage: Test
+  script: 
+   - xcodebuild -scheme Testing in Xcode -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4' test | xcpretty --color
+  tags:
+   - swift
+   - testing
