@@ -1,9 +1,9 @@
 stages:
-  - build
+  - Build
   - Test
 
 build_project:
-  stage: build
+  stage: Build
   script:
     - xcodebuild -scheme Testing in Xcode
   tags:
