@@ -4,8 +4,8 @@ stages:
 build_project:
   stage: Build
   script:
-    - xcodebuild clean -project Testing in Xcode.xcodeproj -scheme Testing in Xcode | xcpretty
-    - xcodebuild test -project Testing in Xcode.xcodeproj -scheme Testing in Xcode | xcpretty -c && exit ${PIPESTATUS[0]}
+    - xcodebuild clean -project Testing in Xcode.xcodeproj -scheme Testing in Xcode
+    - xcodebuild test -project Testing in Xcode.xcodeproj -scheme Testing in Xcode
   tags:
     - swift
     - testing
