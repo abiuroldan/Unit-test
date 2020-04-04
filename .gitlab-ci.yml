@@ -1,19 +1,11 @@
 stages:
   - Build
-  - Test
 
 build_project:
   stage: Build
   script:
-    - xcodebuild -scheme Testing in Xcode
+    - xcodebuild clean -project Testing in Xcode.xcodeproj -scheme Testing in Xcode | xcpretty
+    - xcodebuild test -project Testing in Xcode.xcodeproj -scheme Testing in Xcode | xcpretty -c && exit ${PIPESTATUS[0]}
   tags:
     - swift
     - testing
-
-Feature Tests:
-  stage: Test
-  script: 
-   - xcodebuild -scheme Testing in Xcode -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4' test | xcpretty --color
-  tags:
-   - swift
-   - testing
