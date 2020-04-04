@@ -7,5 +7,5 @@ build_project:
     - xcodebuild clean -project Testing in Xcode.xcodeproj -scheme Testing in Xcode
     - xcodebuild test -project Testing in Xcode.xcodeproj -scheme Testing in Xcode
   tags:
-    - swift
-    - testing
+    - ios
+    - xcode
