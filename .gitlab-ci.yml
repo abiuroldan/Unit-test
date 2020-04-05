@@ -10,9 +10,6 @@ build_project:
   script:
     - bundle install
     - bundle exec fastlane Testing in Xcode
-  artifacts:
-    path:
-	- ./Testing in Xcode.ipa
   tags:
     - ios
     - xcode
