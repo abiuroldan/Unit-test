@@ -1,10 +1,18 @@
 stages:
-  - Build
+    - Build
+
+variables:
+    LC_ALL: "en_US.UTF-8"
+    LANG: "en_US.UTF-8"
 
 build_project:
   stage: Build
   script:
-    - xcodebuild clean -priject Testing in Xcode.xcodeproj -scheme Testing in Xcode
+    - bundle install
+    - bundle exec fastlane Testing in Xcode
+  artifacts:
+    path:
+	- ./Testing in Xcode.ipa
   tags:
     - ios
     - xcode
