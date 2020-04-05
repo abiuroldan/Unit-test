@@ -1,5 +1,6 @@
 stages:
     - Build
+    - Test
 
 variables:
     LC_ALL: "en_US.UTF-8"
@@ -12,3 +13,11 @@ build_project:
   tags:
     - ios
     - xcode
+
+test_project:
+  stage: Test
+  script:
+    - xcodebuild -project Testing\ in\ Xcode.xcodeproj -scheme Testing\ in\ Xcode test
+  tags:
+    - ios
+    - xcode    
