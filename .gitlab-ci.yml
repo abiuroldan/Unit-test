@@ -4,7 +4,7 @@ stages:
 build_project:
   stage: Build
   script:
-    - echo 'Hello world'
+    - xcodebuild clean -priject Testing in Xcode.xcodeproj -scheme Testing in Xcode
   tags:
     - ios
     - xcode
