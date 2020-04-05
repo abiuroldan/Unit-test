@@ -8,8 +8,7 @@ variables:
 build_project:
   stage: Build
   script:
-    - bundle install
-    - bundle exec fastlane
+    - "xcodebuild -workspace Testing in Xcode.xcodeproj -scheme Testing in Xcode clean"
   tags:
     - ios
     - xcode
