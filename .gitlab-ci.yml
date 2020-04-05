@@ -9,7 +9,7 @@ build_project:
   stage: Build
   script:
     - bundle install
-    - bundle exec fastlane Testing in Xcode
+    - bundle exec fastlane
   tags:
     - ios
     - xcode
