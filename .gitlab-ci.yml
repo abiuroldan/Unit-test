@@ -17,7 +17,7 @@ build_project:
 test_project:
   stage: Test
   script:
-    - xcodebuild -project Testing\ in\ Xcode.xcodeproj -scheme Testing\ in\ Xcode test -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.4'
+    - fastlane scan
   tags:
     - ios
     - xcode    
