@@ -8,7 +8,7 @@ variables:
 build_project:
   stage: Build
   script:
-    - "xcodebuild -workspace Testing in Xcode.xcodeproj -scheme Testing in Xcode clean"
+    - xcodebuild -project Testing\ in\ Xcode.xcodeproj -scheme Testing\ in\ Xcode clean
   tags:
     - ios
     - xcode
