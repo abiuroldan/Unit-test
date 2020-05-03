@@ -17,7 +17,7 @@ build_project:
 test_project:
   stage: Test
   script:
-    - fastlane scan
+    - fastlane scan | xcpretty
   tags:
     - ios
     - xcode    
